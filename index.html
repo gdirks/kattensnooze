@@ -1,51 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
-	<head>
-		<title>Katten Snooze </title>
-	</head>
-	<body>
-		<nav id="toc" epub:type="toc">
-		<h2>Contents</h2>
-			<ol>
-				<li><a href="Snooze_Karl_Aage_Layout-1.xhtml">forside</a></li>
-			</ol>
-		</nav>
-		<nav epub:type="page-list">
-		<h2>PageList</h2>
-			<ol>
-				<li><a href="Snooze_Karl_Aage_Layout-1.xhtml">1</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-2.xhtml">2</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-3.xhtml">3</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-4.xhtml">4</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-5.xhtml">5</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-6.xhtml">6</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-7.xhtml">7</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-8.xhtml">8</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-9.xhtml">9</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-10.xhtml">10</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-11.xhtml">11</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-12.xhtml">12</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-13.xhtml">13</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-14.xhtml">14</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-15.xhtml">15</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-16.xhtml">16</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-17.xhtml">17</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-18.xhtml">18</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-19.xhtml">19</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-20.xhtml">20</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-21.xhtml">21</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-22.xhtml">22</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-23.xhtml">23</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-24.xhtml">24</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-25.xhtml">25</a></li>
-				<li><a href="Snooze_Karl_Aage_Layout-26.xhtml">26</a></li>
-			</ol>
-		</nav>
-		<nav epub:type="landmarks">
-		<h2>Landmarks</h2>
-			<ol>
-				<li><a epub:type="cover" href="Snooze_Karl_Aage_Layout-1.xhtml">Cover</a></li>
-			</ol>
-		</nav>
-	</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Katten Snooze Bog 1</title>
+  <script>
+    const pages = ["Snooze_Karl_Aage_Layout-1.xhtml","Snooze_Karl_Aage_Layout-2.xhtml","Snooze_Karl_Aage_Layout-3.xhtml","Snooze_Karl_Aage_Layout-4.xhtml","Snooze_Karl_Aage_Layout-5.xhtml","Snooze_Karl_Aage_Layout-6.xhtml","Snooze_Karl_Aage_Layout-7.xhtml","Snooze_Karl_Aage_Layout-8.xhtml","Snooze_Karl_Aage_Layout-9.xhtml","Snooze_Karl_Aage_Layout-10.xhtml","Snooze_Karl_Aage_Layout-11.xhtml","Snooze_Karl_Aage_Layout-12.xhtml","Snooze_Karl_Aage_Layout-13.xhtml","Snooze_Karl_Aage_Layout-14.xhtml","Snooze_Karl_Aage_Layout-15.xhtml","Snooze_Karl_Aage_Layout-16.xhtml","Snooze_Karl_Aage_Layout-17.xhtml","Snooze_Karl_Aage_Layout-18.xhtml","Snooze_Karl_Aage_Layout-19.xhtml","Snooze_Karl_Aage_Layout-20.xhtml","Snooze_Karl_Aage_Layout-21.xhtml","Snooze_Karl_Aage_Layout-22.xhtml","Snooze_Karl_Aage_Layout-23.xhtml","Snooze_Karl_Aage_Layout-24.xhtml","Snooze_Karl_Aage_Layout-25.xhtml","Snooze_Karl_Aage_Layout-26.xhtml"];
+	let counter = 0
+    function showpage(i){
+    		document.getElementById('mframe').src=pages[i];
+    		}
+    function next(){
+    		if (counter < pages.length-1 ){
+            counter=counter+1;
+            showpage(counter);};
+  			}
+    function previous(){
+    		if (counter>0){
+            counter=counter-1;
+            showpage(counter);};
+    		}
+</script>
+<style>
+.wrapper {
+  position: absolute;
+}
+
+.navbutton{
+
+}
+.box1 {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  width:50px;
+  height: 50px;
+  left:5px;
+  top:500px;
+  margin: 0px;
+  opacity: 0.5;
+}
+
+.box2{
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border:none;
+  width: 50px;
+  height: 50px;
+  left: 725px;
+  top: 500px;
+  margin:0px;
+  opacity: 0.5;
+}
+ .myframe{
+ 		position:absolute;
+        width: 768px;
+        height: 1024px;
+        border: none;
+        padding: 8px;
+        z-index: 1;
+  }
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="box1"><button onclick="previous()"><b style=font-size:40px>&lt&lt</b></button></div>
+  	<div class="box2"><button onclick="next()"><b style=font-size:40px>&gt&gt</b></button></div>
+	
+    <iframe id="mframe" src="Snooze_Karl_Aage_Layout-1.xhtml" class="myframe" name="myframe">Sorry, frame not supported !</iframe>
+</div>
+</body>
 </html>
