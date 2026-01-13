@@ -2,8 +2,36 @@
 "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Katten Snooze Bog 1</title>
+  <title>Katten Snooze Bog 2</title>
   <script>
+    var elem = document.documentElement;
+    let state=0;
+    function togglescreen(){
+	if(state==0){openFullscreen();state=1;}
+	else {closeFullscreen();state=0;}
+    }
+		  
+       
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+    
     const pages = ["Snooze_Karl_Aage_Layout-1.xhtml","Snooze_Karl_Aage_Layout-2.xhtml","Snooze_Karl_Aage_Layout-3.xhtml","Snooze_Karl_Aage_Layout-4.xhtml","Snooze_Karl_Aage_Layout-5.xhtml","Snooze_Karl_Aage_Layout-6.xhtml","Snooze_Karl_Aage_Layout-7.xhtml","Snooze_Karl_Aage_Layout-8.xhtml","Snooze_Karl_Aage_Layout-9.xhtml","Snooze_Karl_Aage_Layout-10.xhtml","Snooze_Karl_Aage_Layout-11.xhtml","Snooze_Karl_Aage_Layout-12.xhtml","Snooze_Karl_Aage_Layout-13.xhtml","Snooze_Karl_Aage_Layout-14.xhtml","Snooze_Karl_Aage_Layout-15.xhtml","Snooze_Karl_Aage_Layout-16.xhtml","Snooze_Karl_Aage_Layout-17.xhtml","Snooze_Karl_Aage_Layout-18.xhtml","Snooze_Karl_Aage_Layout-19.xhtml","Snooze_Karl_Aage_Layout-20.xhtml","Snooze_Karl_Aage_Layout-21.xhtml","Snooze_Karl_Aage_Layout-22.xhtml","Snooze_Karl_Aage_Layout-23.xhtml","Snooze_Karl_Aage_Layout-24.xhtml","Snooze_Karl_Aage_Layout-25.xhtml","Snooze_Karl_Aage_Layout-26.xhtml"];
 	let counter = 0
     function showpage(i){
@@ -28,33 +56,52 @@
 .navbutton{
 
 }
-.box1 {
+.box0 {
   position: absolute;
   z-index: 2;
   background: none;
   border: none;
   width:50px;
   height: 50px;
-  left:5px;
-  top:500px;
+  left:10px;
+  top:10px;
   margin: 0px;
   opacity: 0.5;
+}
+
+.box1 {
+  position: absolute;
+  z-index: 2;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+  border-radius:50%;
+  width:50px;
+  height: 50px;
+  left:10px;
+  top:450px;
+  margin: 0px;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .box2{
   position: absolute;
   z-index: 2;
-  background: none;
-  border:none;
+  text-align: center;
+  font-size: 25px;
+  border-radius:50%;
+  border: none;
   width: 50px;
   height: 50px;
-  left: 725px;
-  top: 500px;
-  margin:0px;
+  left: 700px;
+  top: 450px;
+  margin: 0px;
   opacity: 0.5;
+  cursor: pointer;
 }
  .myframe{
- 		position:absolute;
+ 	position:absolute;
         width: 768px;
         height: 1024px;
         border: none;
@@ -69,8 +116,9 @@
 <body>
 
 <div class="wrapper">
-	<div class="box1"><button onclick="previous()"><b style=font-size:40px>&lt&lt</b></button></div>
-  	<div class="box2"><button onclick="next()"><b style=font-size:40px>&gt&gt</b></button></div>
+	<div ><button class="box1" onclick="previous()"><b><strong>&#8249;</strong></b></button></div>
+  	<div ><button class="box2" onclick="next()"><b><strong>&#8250;</strong></b></button></div>
+	<div ><button class="box0" onclick="togglescreen()" type="image"><img src="9.png" alt="FS"></button></div>
 	
     <iframe id="mframe" src="Snooze_Karl_Aage_Layout-1.xhtml" class="myframe" name="myframe">Sorry, frame not supported !</iframe>
 </div>
